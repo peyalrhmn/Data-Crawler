@@ -1,0 +1,78 @@
+{% extends 'add_cluster/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'add_cluster/styles/index.css' %}">
+
+<!-- About section starts -->
+
+  <section class="about" id="about">
+
+    
+  
+    <div class="row_1">
+        <div class="image">
+          <img src="{% static 'add_cluster/images/team-animate.svg' %}" alt="">
+        </div>
+  
+        <div class="content">
+          <h1 class="heading"> <span>meet</span> our <span> team </h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
+            <a href="#contact"><button class="button"> learn more</button></a>
+        </div>
+  
+    </div>
+  
+  </section>
+  <!-- About section ends -->
+
+  
+  <!-- Contact section starts -->
+
+  <section class="contact" id="contact">
+
+   
+  
+    <div class="row_2">
+  
+        <div class="content">
+          <h1 class="heading"> <span>contact</span><span> us </h1>
+            <p>Name : Joyanta Bhattacharjee</p>
+            <p>Email : joyanta.bhattacharjee@northsouth.edu</p>
+            <p>Name : Peyal H Rahman</p>
+            <p>Email : hasibur.rahman09@northsouth.edu</p>
+            <p>Name : Sumaiya Khan Disha</p>
+            <p>Email : Sumaiya.khan5@northsouth.edu</p>
+        </div>
+
+        
+        <div class="image">
+          <img src="{% static 'add_cluster/images/contact-us-animate.svg' %}" alt="">
+        </div>
+  
+    </div>
+  
+  </section>
+
+
+  <!-- Contact section ends -->
+
+
+
+  <!-- footer section starts -->
+
+  <section class="footer" id="footer">
+    <div class="box">
+      <h3>quick links</h3>
+      <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-chevron-right"></i><img src="https://img.icons8.com/ios-filled/16/000000/home.png"/> home</a>
+      <a href="#about"><i class="fas fa-chevron-right"></i><img src="https://img.icons8.com/ios-glyphs/16/000000/about.png"/> about us </a>
+      <a href="#admin"><i class="fas fa-chevron-right"></i><img src="https://img.icons8.com/ios-glyphs/16/000000/admin-settings-male.png"/> admin </a>
+      <a href="#user_signin"><i class="fas fa-chevron-right"></i><img src="https://img.icons8.com/ios-filled/16/000000/user.png"/> user</a>
+  </div>
+  </section>
+
+
+
+
+  <!-- footer section ends -->
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends 'add_cluster/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load socialaccount %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'add_cluster/styles/index.css' %}" type="text/css">
+    <div class="container" style="margin-top: 30px;">
+    <form action="" method="POST">
+     <h1 class="heading"><span>User</span> Sign <span>In</span></h1>
+      {% csrf_token %}
+      {{ form|crispy }}
+      
+      <br><button type='submit'class='user-signin-btn'>Sign in</button><br><br>
+      <P><strong>Sign In Using &emsp;</strong><a href="{% provider_login_url 'google'%}"><img src="https://img.icons8.com/color/30/000000/google-logo.png"/></a><br>
+
+      </P>
+      
+      <div class="form-group">
+          <small class="text-muted ml-3" >Don't have an account yet? <a href="{% url 'register' %}">Sign Up Today</a></small>
+      </div>
+    </form>
+    </div>
+{% endblock %}

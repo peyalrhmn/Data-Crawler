@@ -1,0 +1,116 @@
+{% extends 'add_cluster/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'add_cluster/styles/index.css' %}">
+  <title>Search</title>
+</head>
+<body>
+
+
+  <!-- About section starts -->
+
+  <section class="about" id="about">
+  
+    <div class="row_1">
+        <div class="image">
+          <img src="{% static 'add_cluster/images/team-animate.svg' %}" alt="">
+        </div>
+  
+        <div class="content">
+          <h1 class="heading"> <span>Create</span> Clusters <span>and search</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
+            <a href="#contact"><button class="button"> learn more</button></a>
+        </div>
+  
+    </div>
+  
+  </section>
+  <!-- About section ends -->
+
+  <!-- Search section starts -->
+
+    <section class="search_data" id="search_data">
+      <div class="container">
+        <form method="POST">
+          {% csrf_token %}
+          <h1 class="heading"><span>Search </span>Data</h1>
+          <input type="text" class="search-field" placeholder="Enter cluster name" name="cluster_name">
+          <input type="text" class="search-field" placeholder="Enter keyword" name="keyword">
+          <!-- <select class="select">
+            <option disable selected>Select cluster</option>
+            <option value="cluster1">Cluster 1</option>
+          </select> -->
+          <button type='submit'class='srch-btn'>Search</button> <br><br><br><br><br>
+          <!-- <h1 class="heading"><span>Search</span> Results </h1> -->
+        </form>
+      </div>
+    </section>
+  
+  <!-- Search section ends -->
+
+  <section class="search_result" id="search_result">
+    <div class="container">
+      <p><p>{{rslt_url}}</p></p>
+      <p>{{srch_rslt}}</p><br><br><br>
+    </div>
+  </section>
+  
+  <!-- Contact section starts -->
+
+  <section class="contact" id="contact">
+
+   
+  
+    <div class="row_2">
+  
+        <div class="content">
+          <h1 class="heading"> <span>Contact</span><span> Us </span></h1>
+            <p>Name : Joyanta Bhattacharjee</p>
+            <p>Email : joyanta.bhattacharjee@northsouth.edu</p>
+            <p>Name : Peyal H Rahman</p>
+            <p>Email : hasibur.rahman09@northsouth.edu</p>
+            <p>Name : Sumaiya Khan Disha</p>
+            <p>Email : Sumaiya.khan5@northsouth.edu</p>
+        </div>
+
+        
+        <div class="image">
+          <img src="{% static 'add_cluster/images/contact-us-animate.svg' %}" alt="">
+        </div>
+  
+    </div>
+  
+  </section>
+
+
+  <!-- Contact section ends -->
+
+
+
+  <!-- footer section starts -->
+
+  <section class="footer" id="footer">
+    <div class="box">
+      <h3>Quick Links</h3>
+      <a href="#navbar"><i class="fas fa-chevron-right"></i> home </a>
+      <a href="#about"><i class="fas fa-chevron-right"></i> about </a>
+      <a href="#admin"><i class="fas fa-chevron-right"></i> admin </a>
+      <a href="#user_signin"><i class="fas fa-chevron-right"></i> user sign in </a>
+  </div>
+  </section>
+
+
+
+
+  <!-- footer section ends -->
+{% endblock content %}
+<body>
+<end>
+</html>

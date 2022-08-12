@@ -1,0 +1,211 @@
+{% extends 'add_cluster/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'add_cluster/styles/index.css' %}">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+  <script src="{% static 'add_cluster/scripts/script.js' %}"></script> -->
+  <title>Create Cluster</title>
+</head>
+<body>
+
+  <!-- About section starts -->
+
+  <section class="about" id="about">
+  
+    <div class="row_1">
+        <div class="image">
+            <img src="{% static 'add_cluster/images/team-animate.svg' %}" alt="">
+        </div>
+  
+        <div class="content">
+          <h1 class="heading"> <span>Create</span> Clusters <span>and search</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
+            <a href="#contact"><button class="button"> learn more</button></a>
+        </div>
+  
+    </div>
+  
+  </section>
+  <!-- About section ends -->
+
+  <!-- Adding Cluster section starts -->
+
+  <section class="adding_cluster" id="adding_cluster">
+    <div class="container">
+      <form method="POST" name="add_urls" id="add_urls">
+        {% csrf_token %}
+        <h1 class="heading"><span>Create</span> Cluster and <span>Crawl Data</span></h1>
+        <input type="text" class="search-field" placeholder="Add cluster name" name="cluster_name">
+        <input type="text" class="search-field" placeholder="Enter user name" name="user_name">
+        <!-- <input type="text" class="search-field" placeholder="Select strategy" name="strategy">
+        <input type="text" class="search-field" placeholder="Enter number of urls" name="noofurls">
+        <a href="#" id="urls" class="crawl-btn" onclick="addURLS();">Enter urls</a>
+        <br><br><br><div id='cont'></div><br><br> -->
+        <input type="text" class="search-field" placeholder="Add URL/s" name="url">
+        <!-- <script>
+          $(document).ready(function() {
+  
+          var MaxInputs       = 20; //maximum input boxes allowed
+          var InputsWrapper   = $("#InputsWrapper"); //Input boxes wrapper ID
+          var AddButton       = $("#AddMoreFileBox"); //Add button ID
+            
+          var x = InputsWrapper.length; //initlal text box count
+          var FieldCount=1; //to keep track of text box added
+            
+          $(AddButton).click(function (e)  //on add input button click
+          {
+                  if(x <= MaxInputs) //max input box allowed
+                  {
+                      FieldCount++; //text box added increment
+                      //add input box
+                      $(InputsWrapper).append('<div class="row"><p class="col-xs-6"><input type="text" placeholder="Enter urls" class="form-control url_list" name="urls[]" id="field_'+ FieldCount +'" value="Enter urls '+ FieldCount +'"/></p><a href="#" class="btn btn-danger removeclass">×</a></div>');
+                      x++; //text box increment
+                  }
+          return false;
+          });
+            
+          $("body").on("click",".removeclass", function(e){ //user click on remove text
+                  if( x > 1 ) {
+                          $(this).parent('div').remove(); //remove text box
+                          x--; //decrement textbox
+                  }
+          return false;
+          })
+          $('#submit').click(function(){            
+                    $.ajax({  
+                          url:"/posturl",  
+                          method:"POST",  
+                          data:$('#add_urls').serialize(),  
+                          success:function(data)  
+                          {  alert(data)
+                              $('#resultbox').html(data);  
+                              $('#add_urls')[0].reset();  
+                          }  
+                    });  
+                }); 
+          });
+        </script>
+        <div id="InputsWrapper">
+          <div class="row">
+              <div class="col-xs-6"><input type="text" name="urls[]" placeholder="Enter urls" class="form-control name_list" /></div>
+              <br>
+              <div class="col-xs-6"><button type="button" name="add" id="AddMoreFileBox" class="btn btn-success">Add More</button></div>
+          </div>
+        </div>
+        <br/>
+        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" /> -->
+        <input type="number" class="search-field" placeholder="Level of depth" name="depth">
+        <select class="select" name="strategy">
+            <option disable selected>Select crawling strategies</option>
+            <option value="pdfonly">PDF Only</option>
+            <option value="txtonly">Text Only</option>
+            <option value="doconly">Doc Only</option>
+            <option value="html">HTML Only</option>
+            <option value="all">All contents</option>
+        </select>
+        <button class="crawl-btn" type="submit" onclick="return alert('Cluster Created Successflly!')">Create Cluster and Crawl Data</button><br><br><br>
+      </form>
+    </div>
+  </section>
+
+  <!-- Adding Cluster section ends -->
+<!--
+  <section class="search_result" id="search_result">
+    <div class="container">
+      <form method="POST" action="{}">
+        {% csrf_token %}
+        <h1 class="heading"><span>Add</span> URL to <span> existing clusters </span></h1>
+        <input type="text" class="search-field" placeholder="Add cluster name" name="cluster_name_n">
+        <input type="text" class="search-field" placeholder="Enter URL" name="url_n">
+        <button class="search-back-btn" type="submit">Add URL</button><br><br><br>
+      </form>
+    </div>
+  </section>
+-->
+  <!-- Search section starts -->
+
+  <section class="search_result" id="search_result">
+    <div class="container">
+      <form action="{% url 'new_url' %}" method="POST">
+        {% csrf_token %}
+        <button class="search-back-btn" type="submit">Add URL</button><br><br><br>
+      </form>
+    </div>
+  </section>
+  
+  <section class="search_result" id="search_result">
+    <div class="container">
+      <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <button class="search-back-btn" type="submit">Go to searching</button><br><br><br>
+      </form>
+    </div>
+  </section>
+
+  <!-- Search section ends -->
+
+  <!-- <form action="searchresult.html">
+    <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit"/>
+  </form> -->
+  
+  <!-- Contact section starts -->
+
+  <section class="contact" id="contact">
+
+   
+  
+    <div class="row_2">
+  
+        <div class="content">
+          <h1 class="heading"> <span>contact</span><span> us </span></h1>
+            <p>Name : Joyanta Bhattacharjee</p>
+            <p>Email : joyanta.bhattacharjee@northsouth.edu</p>
+            <p>Name : Peyal H Rahman</p>
+            <p>Email : hasibur.rahman09@northsouth.edu</p>
+            <p>Name : Sumaiya Khan Disha</p>
+            <p>Email : Sumaiya.khan5@northsouth.edu</p>
+        </div>
+
+        
+        <div class="image">
+          <img src="{% static 'add_cluster/images/contact-us-animate.svg' %}" alt="">
+        </div>
+  
+    </div>
+  
+  </section>
+
+
+  <!-- Contact section ends -->
+
+
+
+  <!-- footer section starts -->
+
+  <section class="footer" id="footer">
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#navbar"><i class="fas fa-chevron-right"></i> home </a>
+      <a href="#about"><i class="fas fa-chevron-right"></i> about </a>
+      <a href="#admin"><i class="fas fa-chevron-right"></i> admin </a>
+      <a href="#user_signin"><i class="fas fa-chevron-right"></i> user sign in </a>
+  </div>
+  </section>
+
+
+
+
+  <!-- footer section ends -->
+{% endblock content %}
+<body>
+<end>
+</html>
