@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Data Crawler SRS</title>
+<!--
+DREAM PULSE
+https://templatemo.com/tm-536-dream-pulse
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="slick/slick.css"/>    
+    <link rel="stylesheet" href="slick/slick-theme.css"/>    
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-dream-pulse.css" />
+    <link rel="stylesheet" href="css/print_css.css" />
+  </head>
+  <body>
+    <main class="container-fluid">
+      <div class="row">        
+          <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-sidebar-sticky">
+              <div class="tm-brand-box">
+                <div class="tm-double-border-1">
+                  <div class="tm-double-border-2">
+                    <h1 class="tm-brand text-uppercase">Data Crawler</h1>
+                  </div>
+                </div>
+              </div>
+
+              <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
+                <li class="nav-item">
+                  <a href="#intro" class="nav-link active">
+                    <span class="d-inline-block mr-3">Welcome</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#Table_of_Contents" class="nav-link">
+                    <span class="d-inline-block mr-3">Table of Contents</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                <li class="nav-item">
+                  <a href="#introduction" class="nav-link">
+                    <span class="d-inline-block mr-3">Introduction</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#overall_description" class="nav-link">
+                    <span class="d-inline-block mr-3">Overall Description</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#external_ir" class="nav-link">
+                    <span class="d-inline-block mr-3">External Interface Requirements</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#sys_features" class="nav-link">
+                    <span class="d-inline-block mr-3">System Features</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#nonfunctional_req" class="nav-link">
+                    <span class="d-inline-block mr-3">Other Nonfunctional Requirements</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#talk" class="nav-link">
+                    <span class="d-inline-block mr-3">Other Requirements</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav flex-row tm-social-links">
+                <li class="nav-item">
+                  <a href="https://facebook.com" class="nav-link tm-social-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://twitter.com" class="nav-link tm-social-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://dribbble.com" class="nav-link tm-social-link">
+                    <i class="fab fa-dribbble"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://linkedin.com" class="nav-link tm-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+              <footer class="text-center text-white small">
+                <p class="mb--0 mb-2">Copyright 2020 Dream Pulse</p>
+                <p class="mb-0">Design:
+                  <a rel="nofollow" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
+                </p>
+              </footer>
+            </div>
+          </nav>
+          
+          <main role="main" class="ml-sm-auto col-12">
+            <div
+              class="parallax-window"
+              data-parallax="scroll"
+              data-image-src="img/dream-pulse-header.jpg">
+              <div class="tm-section-wrap">
+                <section id="intro" class="tm-section">
+                    <div class="tm-bg-white-transparent tm-intro">
+                        <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary">Software Requirement Specification</h2>
+                        <p class="tm-color-gray">
+                          For <br>
+                          Data Crawler <br>
+                        </p>
+                        <p class="mb-0 tm-color-gray">
+                          Prepared by <br>
+                          Md. Hasibur Rahman <br>
+                          Sumaiya Khan <br>
+                          Joyanta Bhattacharjee <br>
+                          16/11/2021
+                        </p>
+                    </div>              
+                </section>
+            </div>            
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="Table_of_Contents" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">Table of Contents</h2>
+                          <p class="mb-5">
+
+                            <strong>1.Introduction </strong><br>
+                            1.1 Purpose <br>
+                            1.2 Document Conventions <br>
+                            1.3 Intended Audience and Reading Suggestions <br>
+                            1.4 Product Scope <br>
+                            1.5 References <br><br>
+                            
+                            <strong>2.Overall Description </strong><br>
+                            2.1 Product Perspective <br>
+                            2.2 Product Functions <br>
+                            2.3 User Classes and Characteristics <br>
+                            2.4 Operating Environment <br>
+                            2.5 Design and Implementation Constraints <br>
+                            2.6 User Documentation <br>
+                            2.7 Assumptions and Dependencies <br><br>
+
+                            <strong>3.External Interface Requirements </strong><br>
+                            3.1 User Interfaces <br>
+                            3.2 Hardware Interfaces <br>
+                            3.3 Software Interfaces <br>
+                            3.4 Communications Interfaces <br><br>
+
+                            <strong>4.System Features </strong><br>
+                            4.1 System Feature 1 <br>
+                            4.2 System Feature 2 (and so on) <br><br>
+
+                            <strong>5.Other Nonfunctional Requirements </strong><br>
+                            5.1 Performance Requirements <br>
+                            5.2 Safety Requirements <br>
+                            5.3 Security Requirements <br>
+                            5.4 Software Quality Attributes <br>
+                            5.5 Business Rules <br><br>
+                            <strong>6.Other Requirements </strong><br>
+                            <strong>Appendix A: Glossary </strong><br>
+                            <strong>Appendix B: Analysis Models </strong>
+                          </p>
+                        </div>
+                    </div> 
+                </div>                             
+              </section>
+            </div>  
+
+          <div class="tm-section-wrap bg-white">
+            <section id="introduction" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">1. Introduction</h2>
+                          <p class="mb-5">
+                                <strong>1.1 Purpose : </strong><br>
+                                The purpose of this document Software Requirements Specification (SRS) is to
+                                explain the specification and description of our product. In this document, we tried
+                                to explain the features of our product so that the clients and developers can easily
+                                understand our product and know how to change it if it is required in the future. <br><br>  
+
+                                <strong>1.2 Document Conventions : </strong><br>
+                                The typographical shows in this SRS contains the standard alluded to as IEEE Std
+                                830-1998 IEEE Recommended Practice for Software Requirements Specifications.
+                                IEEE Computer Society, 1998. <br><br>
+
+                                <strong>1.3 Intended Audience and Reading Suggestions : </strong><br>
+                                The intended audience for this document include the developers, project
+                                managers, marketing staff, users, testers, documentation writers.This document will
+                                act like a guideline for the Developers on how to run the project and also how to
+                                maintain it as well as the guidance on how to change it if it is required. Marketing
+                                staff will be able to use this SRS to get a clear picture about our product and what
+                                is this all about and what they should know before their advertising campaigns.
+                                After going through the SRS users will be able to ensure if the product meets their
+                                requirements. This document will also help the documentation writers and project
+                                testers to know the product better.
+                                The whole SRS, is written into six parts.They are- <br>
+                                1. Introduction <br>
+                                2. Overall Description <br>
+                                3. External Interface Requirements <br>
+                                4. System Features <br>
+                                5. Other Nonfunctional Requirements <br>
+                                6. Other Requirements <br>
+                                If the readers want to know the product better, they are suggested to go through all
+                                the parts sequentially from part one (1) to six (6). <br><br>
+
+                                <strong>1.4 Product Scope : </strong><br>
+                                Our product will be a search cluster based product. In our product the user will be
+                                able to create a search cluster according to their preference where the search cluster
+                                consists of URLs and crawling strategies. Our product is similar to search engine
+                                search, but here the URLs to be searched are controlled by the user and the contents
+                                are scrapped and crawled according to their strategies. <br><br>
+
+                                <strong>1.5 References : </strong><br>
+                                1.Rest API= https://idratherbewriting.com/learnapidoc/ <br>
+                                2.Android = https://developer.android.com/docs <br>
+                                3.Django = https://www.djangoproject.com/ <br>
+                                4.Apache Lucene = https://lucene.apache.org/core/documentation.html <br>
+                                5.MySQL = https://dev.mysql.com/doc/ <br>
+                                6.Python = https://docs.python.org/3/ <br>
+                                7.JavaScript = https://developer.mozilla.org/en-US/docs/Web/JavaScript <br>
+                                8.Java = https://docs.python.org/3/ <br>
+                                9.HTML = https://devdocs.io/html/
+                          </p>
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="overall_description" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">2. Overall Description</h2>
+                          <p class="mb-5">
+                                <strong>2.1	Product Perspective : </strong><br>
+                                The self-contained and unique product provides users a medium to search for their necessary documents on the web. In this product, users will be able to create search clusters according to their preference. Search clusters consist of URLs and crawling strategies. Some crawling strategies include: All context, PDF only, DOC only, text files only and non-HTML content. The URLs bring content by the configured strategies and make it searchable for the user Similar to a search engine, where the URLs to be searched are controlled by the user and the contents are scrapped and crawled according to their strategies. <br><br>
+
+                                <strong>2.2	Product Functions : </strong><br> 
+                                The web interference users will be able to: <br>
+
+                                •	Create and account <br>
+                                •	Log into their account <br>
+                                •	Create Clusters and Crawl data by adding the following: <br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   i. Cluster Name <br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  ii. URLs <br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; iii. Level of Depth <br>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  iv. Selecting a Crawling Strategy <br>
+                                                                                                      
+                                •	Search data through a keyword from a selected Cluster <br>
+                                •	View snippets of content and link to the original URL source <br><br>
+
+                                Using the android interference users will be able to: <br>
+
+                                •	Search data through keyword from a selected Cluster <br><br>
+              
+                                <strong>2.3	User Classes and Characteristics : </strong><br>
+                                The software will be used by admin and users. Users can Sign up for an account and Login. Users can create search clusters according to their preference The software requires users to Sign up and login to their account to create Search Clusters and Crawl data. Updates will take place in intervals once a cluster is created until the user deletes the cluster.
+                                The administrator can add new crawling strategies. The administrator has control over database and functions. The administrator is responsible for product maintenance, server management, security management and system updates.
+                                The program can be accessed by both web and mobile app by any user who has an account. <br><br>
+
+                                <strong>2.4	Operating Environment : </strong><br>
+                                <strong>•	Website: </strong>Any GUI system with a web browser <br>
+                                <strong>•	Mobile app: </strong> Operating system with Android 6 or above <br><br>
+
+                                <strong>2.5	Design and Implementation Constraints : </strong><br>
+                                  The system’s designed is based on Django web framework and Java for Android(both very flexible). REST API is used to connect with any platforms. One of the most popular applications for MySQL database management, phpMyAdmin, is used here. The product will be unusable if an internet connection is not used since it is a necessity for both mobile application and web interference. A list of other limits include: <br>
+                                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    i. hardware limitations <br>
+                                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   ii. specialized technology <br>
+                                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  iii. security concerns <br><br>
+                          
+                                <strong>2.6	User Documentation : </strong><br>
+                                  The system is designed to be informative and user-friendly. For any further questions, the user can look into user manual and video tutorial. <br><br>
+                                  
+                                <strong>2.7	Assumptions and Dependencies : </strong><br>
+                                The system requires an internet connection for both mobile application and web interface. An Android smart phone is required for the voice recognition feature in the app.
+
+                          </p>
+                            
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+          
+          <div class="tm-section-wrap bg-white">
+            <section id="external_ir" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">3. External Interface Requirements</h2>
+                          <p class="mb-5">
+                            <strong>3.1  User Interfaces : </strong><br>
+                            Our product's first priority is to have a “User Friendly” website. In our website,
+                            when a user opens the website firstly they will be redirected to the home page where the user
+                            is a new user they can register or else, if they have an account they can log in using their Email
+                            and password. They can also log in and register using their Google account. There will also be
+                            an option where admin can log in and when an admin logs in they will be redirected to the
+                            Admin panel, where admins can manage all their works. In our product homepage, there will also be
+                            information about the development team and also about the product. From the homepage they can go to the
+                            cluster creation page and search page. From the search page after searching using keyword/s 
+                            they will be redirected to the search results page. Also from the homepage, a user can
+                            have all the information about the product and developer team and contact them if needed.
+                            The following figures illustrate examples for a possible GUI of our product : <br><br>
+
+                            <strong>User Sign in :</strong><br>
+                            <img src="./user_sign_in.PNG" width="800" alt="user sign in"><br>
+                              
+                            <strong>User Sign up :</strong><br>
+                            <img src="./user_sign_up.PNG" width="800" alt="user sign up"><br>
+
+                            <strong>Search Cluster :</strong><br><br>
+                            <img src="./search_cluster_createandsearch.PNG" width="800" alt="search cluster"><br>
+                            
+                            <strong>3.2  Hardware Interfaces : </strong><br>
+                            
+                            Not Applicable <br><br>
+                            
+                            <strong>3.3  Software Interfaces : </strong><br>
+                            We require many types of software programs. We also require various platforms, framework,
+                            Languages. They are- <br>
+                            1.REST API. <br>
+                            2.Django. <br>
+                            3.Android Studio. <br>
+                            4.MySQL Database. <br>
+                            5.Apache Lucene. <br>
+                            6.Language - JS, Java, Python, HTML. <br>
+                            7.OS - Android, Windows, Mac. <br><br>
+                            
+                            <strong>3.4  Communications Interfaces : </strong><br>
+                            
+                            We will use Rest API for server and user communication. The android application will send the audio to Google’s Could server which was given by the user to analyze and will receive the text data which has been recognized in the audio. It will also send text to receive Audio data from Google’s Text-to-speech sever. This will all be done via HTTP requests, and the audio and data transferred are encrypted by Google’s technology.
+                          </p>
+                            
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+            
+          <div class="tm-section-wrap bg-white">
+            <section id="sys_features" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                        <h2 class="tm-color-primary tm-section-title mb-4">4. System Features</h2>
+                        <img src="Admin-Use Case.png" alt="Admin Use Case" width="500" height="500"> <br><br><br>
+                        <img src="System-Use Case.png" alt="Admin Use Case" width="500" height="500"> <br><br><br>
+                        <img src="User-Use Case.png" alt="Admin Use Case" width="500" height="500"> <br><br><br>
+                          <p class="mb-5">
+                            <strong>4.1 Signup</strong><br><br>
+                            4.1.1 Description and Priority <br>
+                            
+                              Use case: Signup <br>
+                              Actor: Users <br>
+                              Precondition: Having required info for Signup <br>
+                              Goal: To be able to login  <br>
+
+                              Overview: A user needs to signup to be able to login. <br> <br>
+                            
+                            4.1.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. User come in the homepage and click signup</td>
+                                    <td>2. They are then taken to the signup page</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide information accordingly and click signup</td>
+                                    <td>4. They are then signed up successfully</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 4 won't take place if user fail to provide the required information. <br>
+                            <br> 4.1.3 Functional Requirements <br>
+                              System has to be connected to database.
+                          </p>
+                          <p class="mb-5">
+                            <br><strong>4.2 Login</strong><br><br>
+                            4.2.1 Description and Priority <br>
+                            Use case: Login <br>
+                            Actor: Users, Admins <br>
+                            Precondition: Having required info for login <br>
+                            Goal: To be able to use the system  <br>
+
+                            Overview: A user needs to login to be able to use the system. <br> <br>
+
+                            4.2.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. User click login</td>
+                                    <td>2. They are then taken to the login form</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide information accordingly and click login</td>
+                                    <td>4. They are then logged in successfully and can use the system</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 4 won't take place if users or admins fail to provide the required information. <br>
+                            <br> 4.2.3 Functional Requirements <br>
+                              User has to be already signed up. <br> 
+                              System has to be connected to database.
+                          </p>
+                          <p class="mb-5">
+                            <br><strong>4.3 Creating Clusters</strong><br><br>
+                            4.3.1 Description and Priority <br>
+                            Use case: Create Clusters <br>
+                            Actor: Users <br>
+                            Precondition: Has to be logged in <br>
+                            Goal: To be able to create clusters and crawl data <br>
+
+                            Overview: Using this feature a user will be able to create clusters and crawl data. <br> <br>
+
+                            4.3.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. User click create cluster</td>
+                                    <td>2. They are then taken to the cluster creation form</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide information accordingly and click create cluster</td>
+                                    <td>4. Then the system will create the cluster and crawl data</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 4 won't take place if users do not provide the required information. <br>
+                            <br> 4.3.3 Functional Requirements <br>
+                              User has to be logged in. <br>
+                              System has to be connected to database.
+                          </p>
+                          <p class="mb-5">
+                            <br><strong>4.4 Searching</strong><br><br>
+                            4.4.1 Description and Priority <br>
+                            Use case: Search on Crawled Data <br>
+                            Actor: Users <br>
+                            Precondition: Have clusters created already <br>
+                            Goal: To be able to search on the user created clusters <br>
+
+                            Overview: Using this feature a user will be able to perform search on created clusters through keywords. <br> <br>
+
+                            4.4.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. User click Search</td>
+                                    <td>2. They are then taken to the searching form</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide keywords, select cluster and click search</td>
+                                    <td>4. Then the system will show the search results</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 4 won't take place if users do not provide the required information. <br>
+                            Step 4: System will show no results if the provided keyword/s are not found in the selected cluster <br>
+                            <br> 4.4.3 Functional Requirements <br>
+                              User has to be logged in. <br>
+                              System has to be connected to database. <br>
+                              User has to provide valid search keywords.
+                          </p>
+                          <p class="mb-5">
+                            <br><strong>4.5 Export Search results</strong><br><br>
+                            4.5.1 Description and Priority <br>
+                            Use case: Export Search results <br>
+                            Actor: Users <br>
+                            Precondition: Has search performed already <br>
+                            Goal: To be able to export search results <br>
+
+                            Overview: Using this feature a user will be able to export search results in XML format. <br> <br>
+
+                            4.5.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. User click Export</td>
+                                    <td>2. They are then taken to the exporting form</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide necessary information and click export</td>
+                                    <td>4. Then the system will export the search results</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 1-4 won't take place if users have not performed any search <br>
+                            Step 2-4 won't take place if users do not provide necessary information <br>
+                            <br> 4.5.3 Functional Requirements <br>
+                              User has to be logged in. <br>
+                              System has to be connected to database. <br>
+                              User has created clusters. 
+                          </p>
+                          <p class="mb-5">
+                            <br><strong>4.6 Adding New Crawling Strategies</strong><br><br>
+                            4.6.1 Description and Priority <br>
+                            Use case: Create New Crawling Strategy <br>
+                            Actor: Admins <br>
+                            Precondition: Admin has to be logged in <br>
+                            Goal: To be able to add new crawling strategy <br>
+
+                            Overview: Using this feature admin will be able to implement new crawling strategies. <br> <br>
+
+                            4.6.2 Stimulus/Response Sequences
+                            <table class="table table-striped table-bordered" style="text-align: center; ">
+                              <tbody>
+                                  <tr>
+                                      <th> Actor actions</th>
+                                      <th> System response </th>
+                                  </tr>
+                                  <tr>
+                                    <td>1. Admin click Add New Crawling Strategy</td>
+                                    <td>2. They are then taken to the adding new crawling strategy form</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3. They provide necessary information and click create</td>
+                                    <td>4. Then the system will be able to crawl data with the new crawling strategy</td>
+                                  </tr>
+                              </table>
+                            <br> Alternative courses: Step 4 won't take place if admin does not provide necessary information <br>
+                            <br> 4.6.3 Functional Requirements <br>
+                              System has to be connected to database. <br>
+                          </p>
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="nonfunctional_req" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">5. Other Non Functional Requirements</h2>
+                          <p class="mb-5">
+                            5.1	Performance Requirements<br>
+                            The system will be able to search data efficiently. Some basic requirements of the software includes:
+                            <br>
+                            Response Time: The duration to perform simple task includes database access, form fill out and more.
+                            If the internet connection is stable, accessing the database will not take more than 2 seconds.
+                            <br>
+                            Workload:
+                            In case of peak workload with a lot of users, the system will be able to perform perfectly.
+                          </p>
+                          <p class="mb-5">
+                            5.2	Safety Requirements<br>
+                            All the data in our system will have a proper backup of data incase of situations hampering the security. If user information is harmed, there are steps to prevent it. The actions that will be taken are:
+                            <br>
+                            1.	The transmission of information to the database has to be secured by the addition of encryption.<br>
+                            2.	Personal information of a user can be accessed by only respective user.<br>
+                            3.	All the information stored in the database will be secure.<br>
+
+                          </p>
+
+                          <p class="mb-5">
+                            5.3	Security Requirements<br>
+                            The system will take necessary steps in protecting any personal information of the user. Any information required by the system will be taken by complete consent of the user. A few steps to be implemented for security requirements are listed below:<br>
+                            1.	Users are allowed only three attempts at password before the system shuts them out. Therefore, making it difficult for hackers to guess the password.<br>
+                            2.	Encryption will guarantee safe data transmission across apps.<br>
+                            3.	Third parties will not have any access to user’s personal information
+
+                          </p>
+                          
+                          <p class="mb-5">
+                            5.4	Software Quality Attributes<br>
+                            Maintainability: Clear source code and documentation is a requirement. Data backup should be possible by our system.<br>
+
+                            Portability: Any mobile device and web browser can have access to the software.<br>
+
+                            Testability: Unit tests will take place to save time and money. Unit tests catch flaws early in the development cycle and helps developer in understanding code base to make quick changes.<br>
+
+                          </p>
+                          <p class="mb-5">
+                            5.5	Business Rules<br>
+                            The data crawled will be updated monthly.
+
+                          </p>
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+          <div class="tm-section-wrap bg-white">
+            <section id="talk" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                  <div class="tm-flex-item-left">
+                      <div class="tm-w-80">
+                          <h2 class="tm-color-primary tm-section-title mb-4">6.Other Requirements</h2>
+                          <p class="mb-5">
+                            <strong>Appendix A: Glossary<br>
+                              •	OS - Operating System. A system software that manages computer hardware, software resources, and provides common services for computer programs.<br>
+                              •	GUI - Graphical User Interface. A type of user interface through which users interact with electronic devices through visual indicator representations.<br>
+                              •	API - Application Programming Interface. A software intermediary that allows two applications to communicate to each other.
+                              <br><br>
+                              Appendix B: Analysis Models
+                              <br>
+                              The data flow diagram provides user with a better understanding of how the program works:
+                              <br>
+                              <img src="data_flow_diagram.png"width="700" height="800">
+                            
+                      </div>
+                  </div> 
+              </div>                             
+            </section>
+          </div>
+
+        </main>        
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-scripts.js"></script>
+  </body>
+</html>
